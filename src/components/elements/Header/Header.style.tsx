@@ -15,7 +15,7 @@ export const Title = styled.h2`
   font-size: ${(props) => props.theme.fontSizes['3xl']};
 
   max-width: 80%;
-  padding-bottom: ${(props) => props.theme.space[6]};
+  padding-bottom: ${(props) => props.theme.space['6']};
 `;
 
 export const Subtitle = styled.span`
@@ -25,6 +25,6 @@ export const Subtitle = styled.span`
 
 export const Wrapper = styled.div`
   padding: 0 ${(props) => props.theme.space[11]};
-  padding-top: ${(props) => props.theme.space[13]};
-  padding-bottom: ${(props) => props.theme.space[20]};
+  padding-top: ${(props) => props.theme.space['13']};
+  padding-bottom: ${(props) => props.theme.space['20']};
 `;

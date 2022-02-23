@@ -1,12 +1,12 @@
 import { render } from '@testing-library/react';
 
+import { WrapperWithStyledComponents } from '../../../test/utils/wrapperStyledComponents';
 import { Header } from './Header';
 
 describe('Header', () => {
   test('Should render', () => {
-    const { getByTestId } = render(<Header />);
-    const header = getByTestId('header');
+    const { getByTestId } = WrapperWithStyledComponents(render, <Header />);
 
-    expect(header).toBeInTheDocument();
+    expect(getByTestId('header')).toBeInTheDocument();
   });
 });
