@@ -1,7 +1,7 @@
 import { Home } from './Home';
 
 const Controller = (props: any) => {
-  return <Home />;
+  return <Home {...props} />;
 };
 
 export default Controller;

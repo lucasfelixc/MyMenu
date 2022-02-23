@@ -1,5 +1,5 @@
-import { CardProps } from '~/components/elements/RestaurantCard/types';
+import { Restaurant } from '~/service/api/restaurant';
 
 export type ListProps = {
-  listCards: CardProps[];
+  listCards: Restaurant[];
 };
