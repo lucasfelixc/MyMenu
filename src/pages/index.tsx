@@ -1,1 +1,1 @@
-export { default, getServerSideProps } from '~/containers/home';
+export { default, getServerSideProps } from '~/containers/Home';

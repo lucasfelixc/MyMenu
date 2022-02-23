@@ -46,6 +46,9 @@ export const theme = {
     '25': '12rem',
     '26': '13rem',
     '196': '49rem',
+    variants: {
+      '30': '10rem',
+    },
   },
   space: {
     '0': '0rem',
