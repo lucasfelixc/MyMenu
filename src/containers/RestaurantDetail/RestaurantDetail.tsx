@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
 
+import { useRouter } from 'next/router';
+
 import ImagTest from '~/assets/image/headerSmall.png';
-import { ImagePerfil } from '~/components';
+import { HeaderDetail } from '~/components';
 
 import { RestaurantDetailProps } from './types';
 
 export const RestaurantDetail = ({ data }: RestaurantDetailProps) => {
+  const { push } = useRouter();
   const [detail, setDetail] = useState({
     id: '',
     name: '',
@@ -25,10 +28,17 @@ export const RestaurantDetail = ({ data }: RestaurantDetailProps) => {
     }
   }, [data]);
 
+  useEffect(() => {
+    console.log(detail);
+  }, [detail]);
+
   return (
     <>
-      <div>hello detail</div>
-      <ImagePerfil img={ImagTest.src} />
+      <HeaderDetail
+        imgBg={detail.image}
+        imgPerfil={detail.logo}
+        onClickBack={async () => await push('/')}
+      />
     </>
   );
 };

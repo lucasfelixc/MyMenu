@@ -14,5 +14,5 @@ export const Container = styled.div<ContainerProps>`
 
   border-radius: 50% 50%;
   border: ${(props) => props.theme.borderWidths.thin} solid
-    ${(props) => props.theme.colors.darkDown};
+    ${(props) => props.theme.colors.white};
 `;
