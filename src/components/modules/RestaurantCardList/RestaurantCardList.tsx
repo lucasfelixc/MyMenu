@@ -12,8 +12,8 @@ export const RestaurantCardList = ({ listCards }: ListProps) => {
           <RestaurantCard
             key={index}
             id={card.id}
-            title={card.title}
-            img={card.img}
+            title={card.name}
+            img={card.image}
           />
         ))}
       </Wrapper>
