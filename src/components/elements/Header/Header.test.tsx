@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react';
 
-import { WrapperWithStyledComponents } from '../../../test/utils/wrapperStyledComponents';
+import { WrapperWithStyledComponents } from '~/test/utils';
+
 import { Header } from './Header';
 
 describe('Header', () => {

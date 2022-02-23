@@ -1,7 +1,7 @@
 import { RenderResult } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 
-import { theme } from '../../styles';
+import { theme } from '~/styles';
 
 export const WrapperWithStyledComponents = (
   fn: (children: React.ReactElement) => RenderResult,
