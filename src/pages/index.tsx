@@ -1,11 +1,1 @@
-import { NextPage } from 'next';
-
-const Home: NextPage = () => {
-  return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
-  );
-};
-
-export default Home;
+export { default, getServerSideProps } from '~/containers/home';
