@@ -1,10 +1,8 @@
 import { render, fireEvent, waitFor } from '@testing-library/react';
 import { RouterContext } from 'next/dist/shared/lib/router-context';
 
-import {
-  WrapperWithStyledComponents,
-  createMockRouter,
-} from '../../../test/utils';
+import { WrapperWithStyledComponents, createMockRouter } from '~/test/utils';
+
 import { RestaurantCard } from './RestaurantCard';
 
 const MockRestaurant = {

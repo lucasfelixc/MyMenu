@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 
 import { WrapperCard, TitleCard } from './RestaurantCard.style';
-import { Props } from './types';
+import { CardProps } from './types';
 
-export const RestaurantCard = ({ id, img, title }: Props) => {
+export const RestaurantCard = ({ id, img, title }: CardProps) => {
   const { push } = useRouter();
 
   const handlePush = async (id: string) => {
