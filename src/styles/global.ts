@@ -23,6 +23,7 @@ export default createGlobalStyle`
   button {
     cursor: pointer;
   }
+
   @media(max-width: 1080px) {
     html {
       font-size: 93.75%;
@@ -33,5 +34,9 @@ export default createGlobalStyle`
       font-size: 87.5%;
     }
   }
-
+  @media(max-width: 520px) {
+    html {
+      font-size: 75%;
+    }
+  }
 `;
