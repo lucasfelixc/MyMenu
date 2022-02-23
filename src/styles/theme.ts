@@ -43,6 +43,8 @@ export const theme = {
     '22': '5.5rem',
     '23': '5.75rem',
     '24': '6rem',
+    '25': '12rem',
+    '26': '13rem',
     '196': '49rem',
   },
   space: {
@@ -102,7 +104,7 @@ export const theme = {
     medium: 500,
     heavy: 600,
     light: 300,
-    strong: 'bolder',
+    strong: 700,
   },
   borderWidths: {
     none: 0,
