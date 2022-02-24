@@ -1,0 +1,1 @@
+export { ImagePerfil } from './ImagePerfil';

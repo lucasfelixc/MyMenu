@@ -4,6 +4,7 @@ export const theme = {
     darkDown: '#333333',
     dark: '#666666',
     darkUp: '#808080',
+    darkShadow: 'rgba(0, 0, 0, 0.5)',
     white: '#ffffff',
     lightDown: '#aaaaaa',
     light: '#cccccc',
@@ -46,6 +47,10 @@ export const theme = {
     '25': '12rem',
     '26': '13rem',
     '196': '49rem',
+    variants: {
+      '30': '10rem',
+      'line-small': '1px',
+    },
   },
   space: {
     '0': '0rem',
