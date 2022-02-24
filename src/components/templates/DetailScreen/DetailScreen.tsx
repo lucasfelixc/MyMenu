@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import ArrowLeft from '~/assets/icons/arrow-left.png';
 import { ImagePerfil, TagInfo } from '~/components';
-import { useWindowSize } from '~/utils';
+import { useWindowSize, FormatPhone } from '~/utils';
 
 import {
   Container,
@@ -47,7 +47,9 @@ export const DetailScreen = ({ data }: DetailScreenProps) => {
           {(width as number) > 992 && (
             <WrapperMainInformation>
               <Title>{data.name}</Title>
-              <ContactInfo>{data.telephone}</ContactInfo>
+              <ContactInfo>
+                {FormatPhone(data.telephone) || data.telephone}
+              </ContactInfo>
               <ContactInfo>{data.website}</ContactInfo>
             </WrapperMainInformation>
           )}
@@ -67,7 +69,10 @@ export const DetailScreen = ({ data }: DetailScreenProps) => {
             <TagInfo
               title="Contato"
               lines={[
-                { line: data.telephone, isSmall: false },
+                {
+                  line: FormatPhone(data.telephone) || data.telephone,
+                  isSmall: false,
+                },
                 { line: data.website, isSmall: false },
               ]}
             />

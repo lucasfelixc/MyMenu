@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import HeaderImageBackgroundDesktop from '~/assets/image/headerBackground.png';
 import HeaderImageBackgroundMobile from '~/assets/image/headerSmall.png';
-import Logo from '~/assets/image/logo.png';
+import Logo from '~/assets/image/logo.svg';
 import { SearchInput } from '~/components';
 import { useWindowSize } from '~/utils';
 
