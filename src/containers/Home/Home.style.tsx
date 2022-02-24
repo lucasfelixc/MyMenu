@@ -5,7 +5,6 @@ type ContainerProps = {
 };
 
 export const Container = styled.div<ContainerProps>`
-  width: 100vw;
   height: 100vh;
 
   position: relative;

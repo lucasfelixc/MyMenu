@@ -1,5 +1,9 @@
+type LineProps = {
+  line: string;
+  isSmall: boolean;
+};
+
 export type TagInfoProps = {
   title: string;
-  subtitle: string;
-  isSmall: boolean;
+  lines: LineProps[];
 };

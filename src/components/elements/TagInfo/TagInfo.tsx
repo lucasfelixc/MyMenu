@@ -1,11 +1,15 @@
 import { Container, Title, Subtitle } from './TagInfo.style';
 import { TagInfoProps } from './types';
 
-export const TagInfo = ({ title, subtitle, isSmall }: TagInfoProps) => {
+export const TagInfo = ({ title, lines }: TagInfoProps) => {
   return (
     <Container>
       <Title>{title}</Title>
-      <Subtitle isSmall={isSmall}>{subtitle}</Subtitle>
+      {lines.map((line, index) => (
+        <Subtitle isSmall={line.isSmall} key={index}>
+          {line.line}
+        </Subtitle>
+      ))}
     </Container>
   );
 };

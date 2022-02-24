@@ -47,7 +47,8 @@ export const DetailScreen = ({ data }: DetailScreenProps) => {
           {(width as number) > 992 && (
             <WrapperMainInformation>
               <Title>{data.name}</Title>
-              <ContactInfo>{`${data.telephone} ${data.website}`}</ContactInfo>
+              <ContactInfo>{data.telephone}</ContactInfo>
+              <ContactInfo>{data.website}</ContactInfo>
             </WrapperMainInformation>
           )}
         </WrapperContentInfo>
@@ -58,39 +59,37 @@ export const DetailScreen = ({ data }: DetailScreenProps) => {
         <WrapperInfo>
           <TagInfo
             title="Descrição"
-            subtitle={data.description}
-            isSmall={false}
+            lines={[{ line: data.description, isSmall: false }]}
           />
         </WrapperInfo>
         {(width as number) < 992 && (
           <WrapperInfo>
             <TagInfo
               title="Contato"
-              subtitle={`${data.telephone}\n${data.website}`}
-              isSmall={false}
+              lines={[
+                { line: data.telephone, isSmall: false },
+                { line: data.website, isSmall: false },
+              ]}
             />
           </WrapperInfo>
         )}
         <WrapperInfo>
           <TagInfo
             title="Faixa de preço"
-            subtitle={data.price_range}
-            isSmall={false}
+            lines={[{ line: data.price_range, isSmall: false }]}
           />
         </WrapperInfo>
         <Divider />
         <WrapperInfo>
           <TagInfo
             title="Horário de funcionamento"
-            subtitle={data.opening_hours}
-            isSmall={true}
+            lines={[{ line: data.opening_hours, isSmall: true }]}
           />
         </WrapperInfo>
         <WrapperInfo>
           <TagInfo
             title="Formas de pagamento"
-            subtitle={data.payment_methods}
-            isSmall={true}
+            lines={[{ line: data.payment_methods, isSmall: true }]}
           />
         </WrapperInfo>
       </ContainerInfo>
