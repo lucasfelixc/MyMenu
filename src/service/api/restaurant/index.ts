@@ -1,3 +1,2 @@
-export { fetchInfiniteData } from './infiniteRestaurant';
-export { restaurantDetail } from './detail';
+export { restaurantApi } from './restaurant';
 export * from './types';

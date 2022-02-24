@@ -1,11 +1,11 @@
 import { GetServerSideProps } from 'next';
 
-import { restaurantDetail } from '~/service/api/restaurant';
+import { restaurantApi } from '~/service/api/restaurant';
 
 const getServerSideProps: GetServerSideProps = async (context) => {
   const { query } = context;
 
-  const data = await restaurantDetail(`/${query.id}`);
+  const data = await restaurantApi(`/${query.id}`);
 
   return {
     props: { data },

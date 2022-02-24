@@ -1,6 +1,6 @@
 import { api } from '..';
 
-export const fetchInfiniteData = <T>(url: string): Promise<T> => {
+export const restaurantApi = <T>(url: string): Promise<T> => {
   return api
     .get<T>(url)
     .then((response) => {
