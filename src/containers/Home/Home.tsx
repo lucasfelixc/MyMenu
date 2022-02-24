@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-import { ListScreen } from '~/components';
+import { ListScreen, LoadingTag } from '~/components';
 import { useLoadingState } from '~/context/loadingAtom';
 import { Restaurant } from '~/service/api/restaurant';
 import { useInfiniteRestaurants } from '~/service/queries/useInfiniteRestaurant';
 
-import { Container } from './Home.style';
+import { Container, WrapperLoading } from './Home.style';
 
 export const Home = () => {
   const {
@@ -26,12 +26,20 @@ export const Home = () => {
     }
   }, [data]);
 
+  const LoadingWrapper = () => {
+    return (
+      <WrapperLoading>
+        <LoadingTag direction="horizontal" />
+      </WrapperLoading>
+    );
+  };
+
   return (
     <Container loading={isLoading}>
       <InfiniteScroll
         dataLength={list.length}
         hasMore={!!hasNextPage}
-        loader={<div />}
+        loader={<LoadingWrapper />}
         next={() => fetchNextPage()}
         scrollableTarget="scrollable-box"
       >
