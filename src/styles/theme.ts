@@ -11,6 +11,7 @@ export const theme = {
     lightMedium: '#E6E6E6',
     lightUp: '#f2f2f2',
     lightOpacity: 'rgba(230, 230, 230, 0.7)',
+    lightSubtitle: '#676666',
   },
   media: {
     mobile: '(max-width: 520px)',
@@ -50,6 +51,7 @@ export const theme = {
     '196': '49rem',
     variants: {
       '30': '10rem',
+      '31': '18.75rem',
       'line-small': '1px',
     },
   },
@@ -78,6 +80,9 @@ export const theme = {
     '21': '5.25rem',
     '22': '5.5rem',
     '23': '5.75rem',
+    variants: {
+      '24': '10rem',
+    },
   },
   fontSizes: {
     xxs: '0.5rem',
