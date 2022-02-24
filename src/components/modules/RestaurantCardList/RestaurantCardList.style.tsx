@@ -16,6 +16,14 @@ export const Container = styled.div`
   background-color: ${(props) => props.theme.colors['white']};
 
   width: 100%;
+
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+
+  @media (min-width: 992px) {
+    width: 50%;
+  }
 `;
 
 export const Title = styled.h5`

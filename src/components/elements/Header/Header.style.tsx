@@ -5,6 +5,8 @@ type ContainerProps = {
 };
 
 export const Container = styled.div<ContainerProps>`
+  width: 100vw;
+
   background: url(${(props) => props.imgBg}) no-repeat;
   background-size: cover;
   background-position: center;

@@ -11,6 +11,8 @@ export const theme = {
     lightMedium: '#E6E6E6',
     lightUp: '#f2f2f2',
     lightOpacity: 'rgba(230, 230, 230, 0.7)',
+    'lightOpacity-3': 'rgba(230, 230, 230, 0.3)',
+    'lightOpacity-1': 'rgba(230, 230, 230, 0.1)',
     lightSubtitle: '#676666',
   },
   media: {
