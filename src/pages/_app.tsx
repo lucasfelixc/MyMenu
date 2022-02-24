@@ -8,7 +8,6 @@ import { RecoilRoot } from 'recoil';
 import { ThemeProvider } from 'styled-components';
 
 import { LoadingScreen } from '~/components';
-import { useLoadingState } from '~/context/loadingAtom';
 import { GlobalStyle, theme } from '~/styles';
 
 const queryClient = new QueryClient({
