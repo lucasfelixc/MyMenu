@@ -59,7 +59,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 1. Faça um clone :
 
 ```sh
-  $ git clone https://github.com/lucasfelixc/mymenu
+  $ git clone https://github.com/lucasfelixc/mymenu.git
 ```
 
 2. Executando a Aplicação:
