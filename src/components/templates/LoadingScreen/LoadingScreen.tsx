@@ -1,11 +1,9 @@
 import { useEffect } from 'react';
 
-import Image from 'next/image';
-
-import Spinner from '~/assets/icons/spinner.png';
+import { LoadingTag } from '~/components';
 import { useLoadingState } from '~/context/loadingAtom';
 
-import { Container, WrapperSpinner, SpanLoading } from './LoadingScreen.style';
+import { Container } from './LoadingScreen.style';
 import { LoadingProps } from './types';
 
 export const LoadingScreen = ({ loading }: LoadingProps) => {
@@ -22,11 +20,7 @@ export const LoadingScreen = ({ loading }: LoadingProps) => {
     <>
       {isLoading ? (
         <Container>
-          <SpanLoading>Carregando</SpanLoading>
-
-          <WrapperSpinner>
-            <Image src={Spinner} />
-          </WrapperSpinner>
+          <LoadingTag direction="vertical" />
         </Container>
       ) : (
         <></>

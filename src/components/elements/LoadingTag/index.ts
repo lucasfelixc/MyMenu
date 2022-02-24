@@ -1,0 +1,1 @@
+export { LoadingTag } from './LoadingTag';
