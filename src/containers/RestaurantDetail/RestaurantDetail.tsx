@@ -1,40 +1,12 @@
-import { useEffect, useState } from 'react';
+import { DetailScreen } from '~/components';
 
-import { useRouter } from 'next/router';
+import { Container } from './RestaurantDetail.style';
+import { RestaurantDetailControllerProps } from './types';
 
-import { HeaderDetail, RestaurantDetailInfo } from '~/components';
-
-import { RestaurantDetailProps } from './types';
-
-export const RestaurantDetail = ({ data }: RestaurantDetailProps) => {
-  const { push } = useRouter();
-  const [detail, setDetail] = useState({
-    id: '',
-    name: '',
-    image: '',
-    logo: '',
-    description: '',
-    telephone: '',
-    price_range: '',
-    payment_methods: '',
-    website: '',
-    opening_hours: '',
-  });
-
-  useEffect(() => {
-    if (data.success) {
-      setDetail({ ...data.data });
-    }
-  }, [data]);
-
+export const RestaurantDetail = ({ data }: RestaurantDetailControllerProps) => {
   return (
-    <>
-      <HeaderDetail
-        imgBg={detail.image}
-        imgPerfil={detail.logo}
-        onClickBack={async () => await push('/')}
-      />
-      <RestaurantDetailInfo userData={detail} />
-    </>
+    <Container>
+      <DetailScreen data={data.data} />
+    </Container>
   );
 };

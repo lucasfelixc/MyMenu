@@ -10,6 +10,7 @@ export const theme = {
     light: '#cccccc',
     lightMedium: '#E6E6E6',
     lightUp: '#f2f2f2',
+    lightOpacity: 'rgba(230, 230, 230, 0.7)',
   },
   media: {
     mobile: '(max-width: 520px)',

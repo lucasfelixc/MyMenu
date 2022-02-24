@@ -1,7 +1,7 @@
 import { useInfiniteQuery, UseInfiniteQueryResult } from 'react-query';
 
 import {
-  fetchInfiniteData,
+  restaurantApi,
   RestaurantFetchResponse,
 } from '~/service/api/restaurant';
 
@@ -21,7 +21,7 @@ export const useInfiniteRestaurants =
       ({ pageParam = 1 }: InfiniteRestaurantParams) => {
         const url = `?page=${pageParam}&limit=10`;
 
-        return fetchInfiniteData<any>(url).then((response: any) => {
+        return restaurantApi<any>(url).then((response: any) => {
           return {
             total: response?.count ?? 0,
             data: response ?? undefined,

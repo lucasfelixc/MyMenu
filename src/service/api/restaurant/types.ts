@@ -23,3 +23,10 @@ export type RestaurantFetchResponse = {
   };
   data: Restaurant[];
 };
+
+export type RestaurantDetailResponse = {
+  data: {
+    success: boolean;
+    data: Restaurant;
+  };
+};
