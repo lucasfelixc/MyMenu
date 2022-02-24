@@ -54,6 +54,7 @@ export const theme = {
     variants: {
       '30': '10rem',
       '31': '18.75rem',
+      '32': '11rem',
       'line-small': '1px',
     },
   },
@@ -83,6 +84,7 @@ export const theme = {
     '22': '5.5rem',
     '23': '5.75rem',
     variants: {
+      '1': '7rem',
       '24': '10rem',
     },
   },
