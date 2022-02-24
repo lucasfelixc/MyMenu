@@ -6,13 +6,23 @@ type ContainerProps = {
 
 export const Container = styled.div<ContainerProps>`
   width: 100vw;
+  height: 60vw;
+  position: fixed;
+  top: 0;
+  left: 0;
 
   background: url(${(props) => props.imgBg}) no-repeat;
   background-size: cover;
   background-position: center;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   @media (min-width: 768px) {
     height: ${(props) => props.theme.sizes.variants['31']};
+    position: static;
   }
 `;
 
@@ -44,6 +54,8 @@ export const Subtitle = styled.p`
 `;
 
 export const Wrapper = styled.div`
+  width: 100%;
+
   padding: 0 ${(props) => props.theme.space[11]};
   padding-top: ${(props) => props.theme.space['13']};
   padding-bottom: ${(props) => props.theme.space['20']};
@@ -65,3 +77,10 @@ export const WrapperImage = styled.div`
   padding-top: ${(props) => props.theme.space['4']};
 `;
 export const WrapperText = styled.div``;
+
+export const WrapperInput = styled.div`
+  width: 40%;
+  margin-bottom: ${(props) => props.theme.space['8']};
+
+  padding: 0 ${(props) => props.theme.space['8']};
+`;

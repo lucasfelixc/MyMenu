@@ -3,6 +3,7 @@ import Image from 'next/image';
 import HeaderImageBackgroundDesktop from '~/assets/image/headerBackground.png';
 import HeaderImageBackgroundMobile from '~/assets/image/headerSmall.png';
 import Logo from '~/assets/image/logo.png';
+import { SearchInput } from '~/components';
 import { useWindowSize } from '~/utils';
 
 import {
@@ -12,6 +13,7 @@ import {
   Wrapper,
   WrapperText,
   WrapperImage,
+  WrapperInput,
 } from './Header.style';
 
 export const Header = () => {
@@ -38,6 +40,11 @@ export const Header = () => {
           <Subtitle>Aqui eu converso com você sobre nossa proposta</Subtitle>
         </WrapperText>
       </Wrapper>
+      {(width as number) > 768 && (
+        <WrapperInput>
+          <SearchInput />
+        </WrapperInput>
+      )}
     </Container>
   );
 };

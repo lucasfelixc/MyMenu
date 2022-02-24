@@ -31,7 +31,7 @@ export const WrapperCard = styled.div<WrapperCardProps>`
       background-size: cover;
       background-position: center;
 
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 3);
 
       transform: scale(1.02);
       -webkit-transform: scale(1.02);

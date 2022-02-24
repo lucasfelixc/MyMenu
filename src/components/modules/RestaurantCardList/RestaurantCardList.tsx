@@ -1,11 +1,25 @@
-import { RestaurantCard } from '~/components';
+import { RestaurantCard, SearchInput } from '~/components';
+import { useWindowSize } from '~/utils';
 
-import { Container, Wrapper, Title } from './RestaurantCardList.style';
+import {
+  Container,
+  Wrapper,
+  Title,
+  WrapperInput,
+} from './RestaurantCardList.style';
 import { ListProps } from './types';
 
 export const RestaurantCardList = ({ listCards }: ListProps) => {
+  const { width } = useWindowSize();
+
   return (
     <Container data-testid="list-restaurant-cards">
+      {(width as number) < 768 && (
+        <WrapperInput>
+          <SearchInput />
+        </WrapperInput>
+      )}
+
       <Title>Restaurantes</Title>
       <Wrapper>
         {listCards.map((card, index) => (
