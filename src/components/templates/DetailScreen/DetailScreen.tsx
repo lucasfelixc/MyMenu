@@ -29,12 +29,12 @@ export const DetailScreen = ({ data }: DetailScreenProps) => {
   const { width } = useWindowSize();
 
   return (
-    <Container>
+    <Container data-testid="detail-screen">
       <ContainerHeader data-testid="header-detail" img={data.image}>
         <WrapperButton>
           <ButtonBack onClick={async () => await push('/')}>
             <WrapperImage>
-              <Image src={ArrowLeft} />
+              <Image src={ArrowLeft} layout="intrinsic" width={7} height={12} />
             </WrapperImage>
 
             {(width as number) > 992 && <TextBack>Voltar</TextBack>}

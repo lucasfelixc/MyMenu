@@ -1,5 +1,6 @@
 import { render, fireEvent, waitFor } from '@testing-library/react';
 import { RouterContext } from 'next/dist/shared/lib/router-context';
+import { RecoilRoot } from 'recoil';
 
 import { WrapperWithStyledComponents, createMockRouter } from '~/test/utils';
 
@@ -24,11 +25,13 @@ describe('Restaurant Card', () => {
     const { getByTestId } = WrapperWithStyledComponents(
       render,
       <RouterContext.Provider value={createMockRouter({})}>
-        <RestaurantCard
-          id={MockRestaurant.id}
-          img={MockRestaurant.img}
-          title={MockRestaurant.title}
-        />
+        <RecoilRoot>
+          <RestaurantCard
+            id={MockRestaurant.id}
+            img={MockRestaurant.img}
+            title={MockRestaurant.title}
+          />
+        </RecoilRoot>
       </RouterContext.Provider>
     );
     const WrapperCard = getByTestId('wrapper-card');
@@ -40,11 +43,13 @@ describe('Restaurant Card', () => {
     const { getByTestId } = WrapperWithStyledComponents(
       render,
       <RouterContext.Provider value={createMockRouter({})}>
-        <RestaurantCard
-          id={MockRestaurant.id}
-          img={MockRestaurant.img}
-          title={MockRestaurant.title}
-        />
+        <RecoilRoot>
+          <RestaurantCard
+            id={MockRestaurant.id}
+            img={MockRestaurant.img}
+            title={MockRestaurant.title}
+          />
+        </RecoilRoot>
       </RouterContext.Provider>
     );
     const WrapperCard = getByTestId('wrapper-card');

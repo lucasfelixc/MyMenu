@@ -35,7 +35,7 @@ export const Home = () => {
   };
 
   return (
-    <Container loading={isLoading}>
+    <Container loading={isLoading} data-testid="home">
       <InfiniteScroll
         dataLength={list.length}
         hasMore={!!hasNextPage}

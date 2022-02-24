@@ -35,7 +35,7 @@ export default {
   coveragePathIgnorePatterns: [
     '/node_modules/',
     '<rootDir>/assets',
-    '<rootDir>/services/openId/*',
+    '<rootDir>/pages',
     '<rootDir>/services/api/*',
   ],
 

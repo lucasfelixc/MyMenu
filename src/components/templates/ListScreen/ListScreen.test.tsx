@@ -1,5 +1,6 @@
 import { render } from '@testing-library/react';
 import { RouterContext } from 'next/dist/shared/lib/router-context';
+import { RecoilRoot } from 'recoil';
 
 import { WrapperWithStyledComponents, createMockRouter } from '~/test/utils';
 
@@ -8,8 +9,15 @@ import { ListScreen } from './ListScreen';
 const MockListCards = [
   {
     id: '1',
-    title: 'Test 1',
-    img: 'image.png',
+    name: 'Test 1',
+    image: 'image.png',
+    logo: '',
+    description: '',
+    telephone: '',
+    price_range: '',
+    payment_methods: '',
+    website: '',
+    opening_hours: '',
   },
 ];
 
@@ -18,7 +26,9 @@ describe('ListScreen', () => {
     const { getByTestId } = WrapperWithStyledComponents(
       render,
       <RouterContext.Provider value={createMockRouter({})}>
-        <ListScreen listCards={MockListCards} />
+        <RecoilRoot>
+          <ListScreen listCards={MockListCards} />
+        </RecoilRoot>
       </RouterContext.Provider>
     );
 
