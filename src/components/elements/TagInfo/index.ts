@@ -1,0 +1,1 @@
+export { TagInfo } from './TagInfo';

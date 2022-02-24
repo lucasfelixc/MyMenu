@@ -49,6 +49,7 @@ export const theme = {
     '196': '49rem',
     variants: {
       '30': '10rem',
+      'line-small': '1px',
     },
   },
   space: {

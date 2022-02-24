@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { useRouter } from 'next/router';
 
-import ImagTest from '~/assets/image/headerSmall.png';
-import { HeaderDetail } from '~/components';
+import { HeaderDetail, RestaurantDetailInfo } from '~/components';
 
 import { RestaurantDetailProps } from './types';
 
@@ -28,10 +27,6 @@ export const RestaurantDetail = ({ data }: RestaurantDetailProps) => {
     }
   }, [data]);
 
-  useEffect(() => {
-    console.log(detail);
-  }, [detail]);
-
   return (
     <>
       <HeaderDetail
@@ -39,6 +34,7 @@ export const RestaurantDetail = ({ data }: RestaurantDetailProps) => {
         imgPerfil={detail.logo}
         onClickBack={async () => await push('/')}
       />
+      <RestaurantDetailInfo userData={detail} />
     </>
   );
 };
