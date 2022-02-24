@@ -25,9 +25,18 @@ export const ContainerHeader = styled.div<ContainerHeaderProps>`
   height: ${(props) => props.theme.sizes['26']};
 
   display: flex;
-  position: relative;
+  width: 100vw;
+  height: 60vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
+    position: static;
+
+    width: 100%;
+    height: 30vh;
+
     margin-bottom: ${(props) => props.theme.space['7']};
   }
 `;
@@ -80,8 +89,12 @@ export const TextBack = styled.span`
 
 export const WrapperImagePerfil = styled.div`
   position: absolute;
-  top: ${(props) => props.theme.space['20']};
+  top: ${(props) => `-${props.theme.space.variants['1']}`};
   left: calc(50% - (${(props) => props.theme.sizes.variants['30']} / 2));
+
+  @media (min-width: 768px) {
+    position: static;
+  }
 
   @media (min-width: 992px) {
     position: static;
@@ -116,8 +129,20 @@ export const ContactInfo = styled.p`
 export const ContainerInfo = styled.div`
   padding: 0 ${(props) => props.theme.space['10']};
 
+  background-color: ${(props) => props.theme.colors['white']};
+
+  width: 100%;
+  position: relative;
+  top: 45vw;
+  left: 0;
+
+  border-radius: ${(props) => props.theme.radii['xlarge']}
+    ${(props) => props.theme.radii['xlarge']} 0 0;
+
   @media (min-width: 768px) {
     max-width: 60%;
+
+    position: static;
   }
 
   @media (min-width: 992px) {
@@ -129,7 +154,7 @@ export const Name = styled.h2`
   text-align: center;
   color: ${(props) => props.theme.colors['darkDown']};
 
-  padding-top: ${(props) => props.theme.space['10']};
+  padding-top: ${(props) => props.theme.space['16']};
   margin-bottom: ${(props) => props.theme.space['10']};
 `;
 

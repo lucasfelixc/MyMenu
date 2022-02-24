@@ -41,10 +41,12 @@ export const DetailScreen = ({ data }: DetailScreenProps) => {
           </ButtonBack>
         </WrapperButton>
         <WrapperContentInfo>
-          <WrapperImagePerfil>
-            <ImagePerfil img={data.logo} />
-          </WrapperImagePerfil>
-          {(width as number) > 992 && (
+          {(width as number) > 768 && (
+            <WrapperImagePerfil>
+              <ImagePerfil img={data.logo} />
+            </WrapperImagePerfil>
+          )}
+          {(width as number) > 768 && (
             <WrapperMainInformation>
               <Title>{data.name}</Title>
               <ContactInfo>
@@ -57,7 +59,12 @@ export const DetailScreen = ({ data }: DetailScreenProps) => {
       </ContainerHeader>
 
       <ContainerInfo>
-        {(width as number) < 992 && <Name>{data.name}</Name>}
+        {(width as number) < 768 && (
+          <WrapperImagePerfil>
+            <ImagePerfil img={data.logo} />
+          </WrapperImagePerfil>
+        )}
+        {(width as number) < 768 && <Name>{data.name}</Name>}
         <WrapperInfo>
           <TagInfo
             title="Descrição"
