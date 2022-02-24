@@ -31,7 +31,7 @@ export const Header = () => {
       <Wrapper>
         {(width as number) >= 992 && (
           <WrapperImage>
-            <Image src={Logo} />
+            <Image src={Logo} layout="intrinsic" width={131} height={30} />
           </WrapperImage>
         )}
 

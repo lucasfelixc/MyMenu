@@ -7,11 +7,11 @@ import { LoadingTagProps } from './types';
 
 export const LoadingTag = ({ direction }: LoadingTagProps) => {
   return (
-    <Container direction={direction}>
+    <Container data-testid="loadingtag-container" direction={direction}>
       <SpanLoading direction={direction}>Carregando</SpanLoading>
 
       <WrapperSpinner>
-        <Image src={Spinner} />
+        <Image src={Spinner} layout="intrinsic" width={15} height={15} />
       </WrapperSpinner>
     </Container>
   );

@@ -1,5 +1,6 @@
 import { render } from '@testing-library/react';
 import { RouterContext } from 'next/dist/shared/lib/router-context';
+import { RecoilRoot } from 'recoil';
 
 import { WrapperWithStyledComponents, createMockRouter } from '~/test/utils';
 
@@ -10,9 +11,24 @@ describe('RestaurantCardList', () => {
     const { getByTestId } = WrapperWithStyledComponents(
       render,
       <RouterContext.Provider value={createMockRouter({})}>
-        <RestaurantCardList
-          listCards={[{ id: '1', img: 'image.png', title: 'Title test' }]}
-        />
+        <RecoilRoot>
+          <RestaurantCardList
+            listCards={[
+              {
+                id: '',
+                name: '',
+                image: '',
+                logo: '',
+                description: '',
+                telephone: '',
+                price_range: '',
+                payment_methods: '',
+                website: '',
+                opening_hours: '',
+              },
+            ]}
+          />
+        </RecoilRoot>
       </RouterContext.Provider>
     );
     const list = getByTestId('list-restaurant-cards');

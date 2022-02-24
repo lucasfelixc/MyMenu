@@ -10,7 +10,7 @@ export const SearchInput = () => {
   const [value, setValue] = useState('');
 
   return (
-    <ContainerInput>
+    <ContainerInput data-testid="input">
       <ContentSearchImage>
         <Image src={Search} alt="Search" width={15} height={15} />
       </ContentSearchImage>

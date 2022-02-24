@@ -19,7 +19,7 @@ export const LoadingScreen = ({ loading }: LoadingProps) => {
   return (
     <>
       {isLoading ? (
-        <Container>
+        <Container data-testid="loading-screen">
           <LoadingTag direction="vertical" />
         </Container>
       ) : (
