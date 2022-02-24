@@ -44,7 +44,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>Get in</title>
+        <title>My Menu</title>
       </Head>
       <QueryClientProvider client={queryClient}>
         <RecoilRoot>
