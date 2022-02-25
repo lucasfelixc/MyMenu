@@ -32,7 +32,10 @@ export const DetailScreen = ({ data }: DetailScreenProps) => {
     <Container data-testid="detail-screen">
       <ContainerHeader data-testid="header-detail" img={data.image}>
         <WrapperButton>
-          <ButtonBack onClick={async () => await push('/')}>
+          <ButtonBack
+            data-testid="button-back"
+            onClick={async () => await push('/')}
+          >
             <WrapperImage>
               <Image src={ArrowLeft} layout="intrinsic" width={7} height={12} />
             </WrapperImage>
