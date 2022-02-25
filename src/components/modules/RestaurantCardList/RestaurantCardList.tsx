@@ -15,7 +15,7 @@ export const RestaurantCardList = ({ listCards }: ListProps) => {
   return (
     <Container data-testid="list-restaurant-cards">
       {(width as number) < 768 && (
-        <WrapperInput>
+        <WrapperInput data-testid="wrapper-input">
           <SearchInput />
         </WrapperInput>
       )}
