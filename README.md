@@ -66,7 +66,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 
 ```sh
   # Instale as dependências
-  $ npm install or $ yarn
+  $ npm install or $ yarn install
 
   # Inicie a aplicação web
   $ yarn dev
